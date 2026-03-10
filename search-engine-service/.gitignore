@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Runtime data (cache, checkpoints, logs, jobs)
+runtime/
+
+# Large Model Files (too big for GitHub)
+*.pt
+*.pth
+*.npy
+*.h5
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment (SENSITIVE - don't backup passwords!)
+.env
+
+# Kiro internal (not needed for backup)
+.kiro/steering/
+.claude/
+
+# Cache files (now using direct ClickHouse)
+runtime/cache/*.parquet
+runtime/cache/segment_preferences.json
+.worktrees/

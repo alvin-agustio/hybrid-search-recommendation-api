@@ -1,0 +1,28 @@
+# Python & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+.env.*
+**/.env
+**/.env.*
+.pytest_cache/
+
+# ML Checkpoints, Vector Databases (FAISS), Embeddings, & Models (VERY SENSITIVE)
+*.pt
+*.npy
+*.safetensors
+search-engine-service/runtime/checkpoints/**/*.pt
+search-engine-service/runtime/checkpoints/**/*.npy
+search-engine-service/runtime/checkpoints/**/faiss_index
+search-engine-service/runtime/checkpoints/**/*.json
+search-engine-service/runtime/checkpoints/**/*.txt
+
+# Logs & Training History
+*.log
+search-engine-service/runtime/jobs/*.json
+search-engine-service/runtime/jobs/*.log
+search-engine-service/runtime/data/*.json
+search-engine-service/runtime/
