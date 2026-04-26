@@ -66,3 +66,27 @@ def test_fastapi_search_endpoint_returns_demo_metadata():
     assert body["retrieval_mode"] == "bm25+semantic"
     assert body["total_found"] > 0
     assert len(body["results"]) <= 3
+
+
+def test_search_filters_zero_score_results():
+    from demo_search.retrieval import HybridDemoSearch
+
+    searcher = HybridDemoSearch.from_paths(
+        catalog_path=Path("demo_search/data/products.csv"),
+        artifact_dir=Path("demo_search/artifacts"),
+    )
+
+    response = searcher.search("obat nyamuk", top_k=5)
+
+    assert response.results
+    assert all(result.final_score > 0 for result in response.results)
+
+
+def test_favicon_route_exists():
+    from demo_search.api import app
+
+    client = TestClient(app)
+    response = client.get("/favicon.ico")
+
+    assert response.status_code == 200
+    assert response.headers["content-type"].startswith("image/")

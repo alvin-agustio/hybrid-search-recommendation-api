@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import List
 
 from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, Response
 
 from .retrieval import HybridDemoSearch
 
@@ -15,6 +15,7 @@ CATALOG_PATH = BASE_DIR / "data" / "products.csv"
 ARTIFACT_DIR = BASE_DIR / "artifacts"
 
 searcher = HybridDemoSearch.from_paths(CATALOG_PATH, ARTIFACT_DIR)
+FAVICON_SVG = b"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#075985"/><path d="M18 20h28v6H35v8h10v6H35v14h-8V20z" fill="#f8fafc"/></svg>"""
 
 app = FastAPI(
     title="Hybrid Retail Search API - Public Demo",
@@ -56,6 +57,11 @@ def root():
     """
 
 
+@app.get("/favicon.ico")
+def favicon():
+    return Response(content=FAVICON_SVG, media_type="image/svg+xml")
+
+
 @app.get("/health")
 def health():
     return {
@@ -91,4 +97,3 @@ def search(
         **asdict(response),
         "results": [asdict(result) for result in response.results],
     }
-

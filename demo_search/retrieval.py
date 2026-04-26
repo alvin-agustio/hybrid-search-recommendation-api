@@ -106,6 +106,7 @@ class HybridDemoSearch:
             final_score = 0.45 * bm25_score + 0.55 * semantic_score
             ranked.append((sku_id, final_score, bm25_score, semantic_score))
 
+        ranked = [item for item in ranked if item[1] > 0]
         ranked.sort(key=lambda item: item[1], reverse=True)
         results = []
         for sku_id, final_score, bm25_score, semantic_score in ranked[:top_k]:
