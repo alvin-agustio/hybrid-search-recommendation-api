@@ -1,0 +1,51 @@
+sku_id,sku_name,division_name,dept_name,class_name,subclass_name,group_name
+1001,Sereal Gandum Cokelat 390G,Grocery,Breakfast,Cereal,Chocolate Cereal,Shelf Stable
+1002,Oatmeal Instant Original 800G,Grocery,Breakfast,Oat,Oatmeal,Shelf Stable
+1003,Granola Madu Almond 250G,Grocery,Breakfast,Cereal,Granola,Shelf Stable
+1004,Roti Tawar Gandum 400G,Bakery,Bread,Bread,White And Wheat Bread,Fresh
+1005,Selai Kacang Creamy 340G,Grocery,Breakfast,Spread,Peanut Butter,Shelf Stable
+1006,Susu UHT Full Cream 1L,Dairy,Milk,Milk,UHT Milk,Chilled
+1007,Susu Rendah Lemak 1L,Dairy,Milk,Milk,Low Fat Milk,Chilled
+1008,Susu Formula Anak Vanila 800G,Baby,Baby Food,Milk Formula,Kids Formula,Shelf Stable
+1009,Bubur Bayi Beras Merah 120G,Baby,Baby Food,Baby Cereal,Infant Cereal,Shelf Stable
+1010,Kopi Bubuk Arabika 200G,Beverage,Coffee,Coffee,Ground Coffee,Shelf Stable
+1011,Kopi Instan Classic 20 Sachet,Beverage,Coffee,Coffee,Instant Coffee,Shelf Stable
+1012,Latte Sachet Gula Aren 10 Pack,Beverage,Coffee,Coffee,Milk Coffee,Shelf Stable
+1013,Teh Hijau Celup 25 Bag,Beverage,Tea,Tea,Green Tea,Shelf Stable
+1014,Jus Jeruk 1L,Beverage,Juice,Juice,Fruit Juice,Chilled
+1015,Keripik Kentang Original 120G,Snack,Salty Snack,Chips,Potato Chips,Shelf Stable
+1016,Keripik Pisang Cokelat 115G,Snack,Sweet Snack,Chips,Banana Chips,Shelf Stable
+1017,Biskuit Oatmeal Raisin 200G,Snack,Biscuits,Biscuit,Oat Biscuit,Shelf Stable
+1018,Wafer Cokelat 180G,Snack,Sweet Snack,Wafer,Chocolate Wafer,Shelf Stable
+1019,Kacang Panggang BBQ 150G,Snack,Salty Snack,Nuts,Roasted Nuts,Shelf Stable
+1020,Popcorn Caramel 100G,Snack,Sweet Snack,Popcorn,Caramel Popcorn,Shelf Stable
+1021,Mi Instan Goreng 85G,Grocery,Noodle,Instant Noodle,Fried Noodle,Shelf Stable
+1022,Mi Instan Kuah Ayam 75G,Grocery,Noodle,Instant Noodle,Soup Noodle,Shelf Stable
+1023,Beras Premium 5KG,Grocery,Rice,Rice,White Rice,Shelf Stable
+1024,Minyak Goreng 2L,Grocery,Cooking,Cooking Oil,Palm Oil,Shelf Stable
+1025,Gula Pasir 1KG,Grocery,Baking,Sugar,White Sugar,Shelf Stable
+1026,Shampoo Anti Dandruff 170ML,Personal Care,Hair Care,Shampoo,Anti Dandruff,Toiletries
+1027,Shampoo Herbal Fresh 300ML,Personal Care,Hair Care,Shampoo,Herbal Shampoo,Toiletries
+1028,Conditioner Keratin Smooth 300ML,Personal Care,Hair Care,Conditioner,Hair Conditioner,Toiletries
+1029,Sabun Mandi Cair Lavender 450ML,Personal Care,Bath,Body Wash,Liquid Soap,Toiletries
+1030,Pasta Gigi Mint 190G,Personal Care,Oral Care,Toothpaste,Mint Toothpaste,Toiletries
+1031,Deterjen Cair Anti Noda 1.8L,Home Care,Laundry,Detergent,Liquid Detergent,Household
+1032,Sabun Cuci Piring Lemon 750ML,Home Care,Dishwashing,Dish Soap,Liquid Dish Soap,Household
+1033,Pembersih Lantai Pine 800ML,Home Care,Cleaning,Floor Cleaner,Liquid Cleaner,Household
+1034,Aerosol Anti Nyamuk 600ML,Home Care,Pest Control,Insecticide,Mosquito Spray,Household
+1035,Lotion Anti Nyamuk 100ML,Home Care,Pest Control,Repellent,Mosquito Repellent,Household
+1036,Obat Pel Sereh 700ML,Home Care,Cleaning,Floor Cleaner,Disinfectant Cleaner,Household
+1037,Makanan Kucing Tuna 400G,Pet Care,Cat Food,Pet Food,Wet Cat Food,Pet
+1038,Makanan Kucing Salmon 1.1KG,Pet Care,Cat Food,Pet Food,Dry Cat Food,Pet
+1039,Snack Kucing Creamy Tuna 4 Pack,Pet Care,Cat Treat,Pet Treat,Cat Snack,Pet
+1040,Pasir Kucing Wangi 5L,Pet Care,Cat Litter,Pet Supplies,Cat Litter,Pet
+1041,Makanan Anjing Ayam 1KG,Pet Care,Dog Food,Pet Food,Dry Dog Food,Pet
+1042,Air Mineral 1.5L,Beverage,Water,Water,Mineral Water,Shelf Stable
+1043,Minuman Oat Cokelat 1L,Dairy,Plant Milk,Milk Alternative,Oat Milk,Chilled
+1044,Yogurt Plain 500ML,Dairy,Yogurt,Yogurt,Plain Yogurt,Chilled
+1045,Keju Slice 10 Lembar,Dairy,Cheese,Cheese,Sliced Cheese,Chilled
+1046,Sereal Jagung Madu 300G,Grocery,Breakfast,Cereal,Corn Cereal,Shelf Stable
+1047,Roti Sobek Cokelat 300G,Bakery,Bread,Sweet Bread,Chocolate Bread,Fresh
+1048,Madu Murni 250ML,Grocery,Breakfast,Sweetener,Honey,Shelf Stable
+1049,Cokelat Bar Almond 90G,Snack,Sweet Snack,Chocolate,Chocolate Bar,Shelf Stable
+1050,Permen Mint 50G,Snack,Candy,Candy,Mint Candy,Shelf Stable

@@ -13,6 +13,7 @@ env/
 # ML Checkpoints, Vector Databases (FAISS), Embeddings, & Models (VERY SENSITIVE)
 *.pt
 *.npy
+!demo_search/artifacts/product_embeddings.npy
 *.safetensors
 search-engine-service/runtime/checkpoints/**/*.pt
 search-engine-service/runtime/checkpoints/**/*.npy

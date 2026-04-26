@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic
+numpy
+pandas
+rank-bm25
+symspellpy
+httpx
+pytest

@@ -1,3 +1,12 @@
+---
+title: Hybrid Retail Search API
+emoji: 🔎
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+---
+
 <div align="center">
 
 # 🤖 RetailCo - NLP Hybrid Search & Recommendation API
@@ -20,6 +29,37 @@ Designed to reduce the "zero results" problem in large retail catalogs, this API
 ---
 
 ## 🚀 Quick Start
+
+### Public Demo: Hugging Face Space
+
+This repository includes lightweight Docker Space packaging for a public FastAPI demo. The public demo uses a small sanitized catalog and precomputed public semantic artifacts, while the original confidential ClickHouse data and production checkpoints remain excluded.
+
+Run the public demo locally:
+
+```bash
+pip install -r space-requirements.txt
+python scripts/build_public_demo_artifacts.py
+uvicorn demo_search.api:app --host 0.0.0.0 --port 7860
+```
+
+Open the local API docs at `http://localhost:7860/docs`.
+
+Test the same container that Hugging Face Spaces will build:
+
+```bash
+docker build -t retailco-search-demo .
+docker run --rm -p 7860:7860 retailco-search-demo
+```
+
+Deploy to Hugging Face Spaces:
+
+1. Create a new Hugging Face Space and choose **Docker** as the SDK.
+2. Push this repository with `Dockerfile`, `.dockerignore`, and `space-requirements.txt` at the repository root.
+3. Hugging Face will build the image and run `uvicorn demo_search.api:app --host 0.0.0.0 --port 7860`.
+
+After the Space starts, the public API docs are available at `/docs`.
+
+### Original Internal Runtime
 
 ```bash
 cd hybrid-search-recommendation-api/search-engine-service
@@ -153,7 +193,7 @@ This repository is a sanitized portfolio mirror of an internal search and recomm
 
 - The original system depended on private infrastructure, internal ClickHouse data, and excluded runtime model artifacts
 - Large checkpoints, vector indexes, private catalogs, and production runtime files were intentionally removed from the public version
-- The public version is intended to demonstrate architecture, ranking logic, model design, and implementation quality rather than full public execution
+- The public demo path under `demo_search/` is intended to run publicly with sanitized sample data and lightweight artifacts
 
 ## Usage Notice
 
