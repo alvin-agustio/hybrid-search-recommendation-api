@@ -10,7 +10,7 @@
 
 *A hybrid retrieval platform that combines lexical search, semantic embeddings, and segment-aware reranking to make large retail catalogs searchable in a way that feels useful, fast, and commercially relevant.*
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Hugging%20Face%20Space-2f2f2f?style=for-the-badge&logo=huggingface&logoColor=yellow)](https://alvin-agustio-hybrid-search-recommendation-api.hf.space/)
+[![Live Demo](https://img.shields.io/badge/LIVE%20DEMO-HUGGING%20FACE-f0c419?style=for-the-badge&logo=huggingface&logoColor=black&labelColor=4b4b52&color=f0c419&messageColor=ffffff)](https://alvin-agustio-hybrid-search-recommendation-api.hf.space/)
 
 </div>
 
