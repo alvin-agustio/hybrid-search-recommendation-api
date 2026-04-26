@@ -340,8 +340,6 @@ def root():
             <p class="subcopy">Search the demo catalog with a lightweight hybrid stack: lexical matching, semantic retrieval, and live score fusion. The production system used private retail data; this Space runs a sanitized public sample.</p>
             <div class="links">
               <a href="/docs">Open API docs</a>
-              <a href="/health">Health check</a>
-              <a href="/examples">Example endpoint</a>
             </div>
           </section>
 
@@ -358,9 +356,7 @@ def root():
               </div>
             </div>
 
-            <div id="status">
-              <span class="status-pill">Ready to query the live API</span>
-            </div>
+            <div id="status"></div>
 
             <section id="results" aria-live="polite"></section>
           </section>
