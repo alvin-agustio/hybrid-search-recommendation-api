@@ -68,6 +68,32 @@ def test_fastapi_search_endpoint_returns_demo_metadata():
     assert len(body["results"]) <= 3
 
 
+def test_root_page_contains_search_ui():
+    from demo_search.api import app
+
+    client = TestClient(app)
+    response = client.get("/")
+
+    assert response.status_code == 200
+    html = response.text
+    assert 'id="search-form"' in html
+    assert 'id="query-input"' in html
+    assert 'id="search-button"' in html
+    assert 'id="results"' in html
+    assert "Try an example query" in html
+    assert "fetch('/search" in html
+
+
+def test_root_page_validates_short_query_client_side():
+    from demo_search.api import app
+
+    client = TestClient(app)
+    response = client.get("/")
+
+    assert response.status_code == 200
+    assert "trimmed.length < 2" in response.text
+
+
 def test_search_filters_zero_score_results():
     from demo_search.retrieval import HybridDemoSearch
 

@@ -42,7 +42,7 @@ python scripts/build_public_demo_artifacts.py
 uvicorn demo_search.api:app --host 0.0.0.0 --port 7860
 ```
 
-Open the local API docs at `http://localhost:7860/docs`.
+Open `http://localhost:7860/` for the interactive search tester, or `http://localhost:7860/docs` for the API docs.
 
 Test the same container that Hugging Face Spaces will build:
 
@@ -57,7 +57,7 @@ Deploy to Hugging Face Spaces:
 2. Push this repository with `Dockerfile`, `.dockerignore`, and `space-requirements.txt` at the repository root.
 3. Hugging Face will build the image and run `uvicorn demo_search.api:app --host 0.0.0.0 --port 7860`.
 
-After the Space starts, the public API docs are available at `/docs`.
+After the Space starts, the root page serves the interactive search tester and the public API docs remain available at `/docs`.
 
 ### Original Internal Runtime
 
