@@ -1,3 +1,12 @@
+---
+title: Hybrid Retail Search API
+emoji: 🔎
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+---
+
 <div align="center">
 
 # 🤖 RetailCo - NLP Hybrid Search & Recommendation API
