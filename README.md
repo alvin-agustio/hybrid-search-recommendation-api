@@ -1,15 +1,6 @@
----
-title: Hybrid Retail Search API
-emoji: 🔎
-colorFrom: blue
-colorTo: green
-sdk: docker
-app_port: 7860
----
-
 <div align="center">
 
-# 🤖 RetailCo - NLP Hybrid Search & Recommendation API
+# RetailCo - NLP Hybrid Search & Recommendation API
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
@@ -25,12 +16,12 @@ app_port: 7860
 
 ---
 
-## 🎯 Business Impact
+## Business Impact
 Designed to reduce the "zero results" problem in large retail catalogs, this API understands user intent instead of relying only on exact keyword overlap. A query such as *"breakfast"* can surface cereals, oats, and related products, while segment-aware reranking adjusts the results toward the preferences of a given loyalty cohort. The result is better product discoverability and a stronger path to conversion.
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Public Demo: Hugging Face Space
 
@@ -79,7 +70,7 @@ uvicorn api_training:app --host 0.0.0.0 --port 8001
 
 ---
 
-## 📈 Performance Snapshot
+## Performance Snapshot
 
 - **Average latency:** ~98.9 ms for hybrid retrieval plus reranking
 - **Stage 1 quality:** `NDCG = 0.798`
@@ -88,9 +79,9 @@ uvicorn api_training:app --host 0.0.0.0 --port 8001
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### ⚡ 1. Hybrid Search Paradigm (Lexical + Semantic)
+### 1. Hybrid Search Paradigm (Lexical + Semantic)
 ```mermaid
 flowchart LR
     Q["User Query (e.g., 'breakfast')"] -->|Exact Match| BM(BM25 Algorithm)
@@ -100,7 +91,7 @@ flowchart LR
     FUSION --> RES((Ranked Product Results))
 ```
 
-### 🧠 2. Conceptual Semantic Space
+### 2. Conceptual Semantic Space
 ```mermaid
 flowchart TD
     TXT[Product Descriptions / Categories] --> ENC[RoBERTa / IndoBERT Transformer]
@@ -109,7 +100,7 @@ flowchart TD
     IDX -->|Sub-millisecond Retrieval| OUT(Cosine Similarity Match)
 ```
 
-### 🙋‍♂️ 3. Segment Fusion (Personalization)
+### 3. Segment Fusion (Personalization)
 ```mermaid
 flowchart LR
     RES[Global Search Results] --> RERANK{Personalization Engine}
@@ -119,7 +110,7 @@ flowchart LR
     RERANK -->|Boosts Premium SKUs| FINAL[Personalized Feed]
 ```
 
-### 🛠️ 4. Typo Tolerance & NLP Rescue
+### 4. Typo Tolerance & NLP Rescue
 ```mermaid
 flowchart TD
     TYPO["Misspelled Query ('dancoww')"] --> SPELL{SymSpell Recovery}
@@ -130,7 +121,7 @@ flowchart TD
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 Built as a lightweight microservices ecosystem with highly decoupled Inference and Training layers.
 
@@ -138,22 +129,22 @@ Built as a lightweight microservices ecosystem with highly decoupled Inference a
 flowchart TB
     U[Client / App / User] --> API[Search API<br/>FastAPI - Port 8000]
     AF[Airflow / Cron] --> TRN[Training API<br/>FastAPI - Port 8001]
-    
+
     API --> INF[Inference Layer<br/>Hybrid Search & Fusion]
     TRN --> MDL[Training Layer<br/>Stage 1 & Stage 2]
-    
+
     INF --> CH[(ClickHouse DB)]
     MDL --> CH
-    
+
     TRN -- "Saves Model Checkpoints" --> RUN[(Runtime Checkpoints)]
     RUN -- "Loads Latest Models" --> INF
 ```
 
-### 🧠 Model Output & Performance
+### Model Output & Performance
 - **Stage 1 (Product Encoder):** Compresses catalog text/categories into vectors using Meta's FAISS index. Space: ~650 MB. **Score: NDCG = 0.798**.
-- **Stage 2 (Query Encoder):** Aligns natural language queries with product vectors. Space: ~68 MB. **Validation alignment: Cosine Similarity ≈ 0.8**; retrieval quality: MRR Combined = 0.373.
+- **Stage 2 (Query Encoder):** Aligns natural language queries with product vectors. Space: ~68 MB. **Validation alignment: Cosine Similarity ~ 0.8**; retrieval quality: MRR Combined = 0.373.
 
-## 🔎 Example API Usage
+## Example API Usage
 
 ```bash
 curl "http://localhost:8000/search?query=sarapan&top_k=10"
@@ -164,14 +155,14 @@ curl "http://localhost:8000/member/00000000000"
 For endpoint details and operational notes, see `search-engine-service/MANUAL_GUIDE.md`.
 
 
-## 🔧 What I Built
+## What I Built
 
 - Designed and implemented the search and training services end-to-end
 - Built the hybrid retrieval pipeline that combines BM25 lexical matching with semantic vector search and score fusion
 - Implemented the model-training flow for the product encoder and query encoder, including evaluation metrics and checkpoint management
 - Built personalization logic that re-ranks search results using segment-based user preference signals
 
-## 👀 How To Review This Repository
+## How To Review This Repository
 
 This public version focuses on **architecture and implementation review**.
 
@@ -180,7 +171,7 @@ This public version focuses on **architecture and implementation review**.
 3. Review `search-engine-service/models/search_model.py` and `search-engine-service/models/enhanced_query_encoder.py` for model architecture.
 4. Review `search-engine-service/training/train_stage1.py`, `train_stage2.py`, and `losses.py` for the training and evaluation design.
 
-## 🗂️ Repository Guide
+## Repository Guide
 
 - `search-engine-service/api.py`: search-serving API and reload lifecycle
 - `search-engine-service/api_training.py`: training job orchestration API
@@ -189,7 +180,7 @@ This public version focuses on **architecture and implementation review**.
 - `search-engine-service/training/`: dataset construction, losses, and training stages
 - `search-engine-service/runtime/`: runtime checkpoints and job metadata
 
-## 📌 Public Version Scope
+## Public Version Scope
 
 This repository is a sanitized portfolio mirror of an internal search and recommendation system.
 
